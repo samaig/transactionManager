@@ -1,0 +1,41 @@
+-- Inserting data into users table
+INSERT INTO users (firstName, lastName, email, passwordHash)
+VALUES ('John', 'Doe', 'john.doe@gmail.com', SHA2('johnPassword', 256)),
+       ('Jane', 'Doe', 'jane.doe@gmail.com', SHA2('janePassword', 256)),
+       ('Bob', 'Smith', 'bob.smith@gmail.com', SHA2('bobPassword', 256)),
+       ('Alice', 'Johnson', 'alice.johnson@gmail.com', SHA2('alicePassword', 256)),
+       ('Charlie', 'Brown', 'charlie.brown@gmail.com', SHA2('charliePassword', 256)),
+       ('Dave', 'Williams', 'dave.williams@gmail.com', SHA2('davePassword', 256));
+
+-- Inserting data into transactions table
+INSERT INTO transactions (userId, amount, transactionType, status)
+VALUES (1, 100.00, 'deposit', 'COMPLETED'),
+       (1, 50.00, 'withdrawal', 'COMPLETED'),
+       (1, 120.00, 'deposit', 'PENDING'),
+       (1, 70.00, 'withdrawal', 'COMPLETED'),
+       (1, 140.00, 'deposit', 'COMPLETED'),
+       (2, 200.00, 'deposit', 'CANCELLED'),
+       (2, 100.00, 'withdrawal', 'COMPLETED'),
+       (2, 220.00, 'deposit', 'COMPLETED'),
+       (2, 120.00, 'withdrawal', 'PENDING'),
+       (2, 240.00, 'deposit', 'COMPLETED'),
+       (3, 300.00, 'deposit', 'COMPLETED'),
+       (3, 150.00, 'withdrawal', 'PENDING'),
+       (3, 320.00, 'deposit', 'COMPLETED'),
+       (3, 170.00, 'withdrawal', 'CANCELLED'),
+       (3, 340.00, 'deposit', 'COMPLETED'),
+       (4, 400.00, 'deposit', 'PENDING'),
+       (4, 200.00, 'withdrawal', 'COMPLETED'),
+       (4, 420.00, 'deposit', 'COMPLETED'),
+       (4, 220.00, 'withdrawal', 'CANCELLED'),
+       (4, 440.00, 'deposit', 'COMPLETED'),
+       (5, 500.00, 'deposit', 'COMPLETED'),
+       (5, 250.00, 'withdrawal', 'PENDING'),
+       (5, 520.00, 'deposit', 'COMPLETED'),
+       (5, 270.00, 'withdrawal', 'COMPLETED'),
+       (5, 540.00, 'deposit', 'COMPLETED'),
+       (6, 600.00, 'deposit', 'CANCELLED'),
+       (6, 300.00, 'withdrawal', 'COMPLETED'),
+       (6, 620.00, 'deposit', 'COMPLETED'),
+       (6, 310.00, 'withdrawal', 'PENDING'),
+       (6, 640.00, 'deposit', 'COMPLETED');

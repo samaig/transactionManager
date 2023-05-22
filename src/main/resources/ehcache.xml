@@ -1,0 +1,25 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+         updateCheck="false"
+         monitoring="autodetect"
+         dynamicConfig="true">
+
+    <diskStore path="java.io.tmpdir"/>
+
+    <sizeOfPolicy maxDepth="10000" maxDepthExceededBehavior="abort"/>
+
+    <defaultCache statistics="true" maxEntriesLocalHeap="200" maxMemoryOffHeap="10"/>
+
+    <cache name="findTransactionById" eternal="false"
+           maxElementsInMemory="1000" overflowToOffHeap="false"
+           overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="7200"
+           memoryStoreEvictionPolicy="LRU"/>
+
+    <cache name="findTransactionsByUserId" eternal="false"
+           maxElementsInMemory="1000" overflowToOffHeap="false"
+           overflowToDisk="false" diskPersistent="false"
+           timeToLiveSeconds="7200"
+           memoryStoreEvictionPolicy="LRU"/>
+
+</ehcache>
