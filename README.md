@@ -9,7 +9,7 @@ mysql db - (you can use any db of your choice)
 - amend the spring.datasource connection properties in the `application.yml` file with the correct values for your db
 
 # Create Database
-- create database with name: drex
+- create database with name: zilch
 ```sql
 CREATE DATABASE zilch
 ```
